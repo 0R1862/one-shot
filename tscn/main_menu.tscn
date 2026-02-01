@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://cvg2f5a0ytx86"]
+
+[ext_resource type="Script" uid="uid://ds3vagdxy5bvw" path="res://tscn/Main_mn.gd" id="1_ukx4d"]
+[ext_resource type="PackedScene" uid="uid://d0u04upqxxd73" path="res://tscn/color_rect.tscn" id="1_ymtcx"]
+[ext_resource type="FontFile" uid="uid://bgv586r20ps8e" path="res://fonts/Xolonium-Regular.ttf" id="2_ukx4d"]
+
+[node name="Main_menu" type="Node2D" unique_id=1110305780]
+script = ExtResource("1_ukx4d")
+
+[node name="ColorRect" parent="." unique_id=1474543631 instance=ExtResource("1_ymtcx")]
+
+[node name="B_M" type="Control" parent="." unique_id=1900607596]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Play" type="Button" parent="B_M" unique_id=171454943]
+layout_mode = 0
+offset_left = 253.0
+offset_top = 187.0
+offset_right = 897.0
+offset_bottom = 316.0
+theme_override_fonts/font = ExtResource("2_ukx4d")
+theme_override_font_sizes/font_size = 26
+text = "PLAY GAME"
+
+[node name="Quit" type="Button" parent="B_M" unique_id=167105909]
+layout_mode = 0
+offset_left = 253.0
+offset_top = 340.0
+offset_right = 897.0
+offset_bottom = 469.0
+theme_override_fonts/font = ExtResource("2_ukx4d")
+theme_override_font_sizes/font_size = 27
+text = "QUIT GAME"
+
+[connection signal="pressed" from="B_M/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="B_M/Quit" to="." method="_on_quit_pressed"]

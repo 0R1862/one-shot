@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://d0u04upqxxd73"]
+
+[node name="ColorRect" type="ColorRect" unique_id=1474543631]
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 1154.0
+offset_bottom = 649.0
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1626733096]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 56.0
+offset_right = 1100.0
+offset_bottom = 602.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect" unique_id=1592993134]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.038000003
+anchor_bottom = 0.07300001
+offset_left = 111.0
+offset_top = 102.0
+offset_right = 877.36597
+offset_bottom = 391.142
