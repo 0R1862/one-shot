@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://exxnkhoma6ld"]
 
-[ext_resource type="Texture2D" uid="uid://cuxoaep2a6jcs" path="res://bg/background 1.png" id="1_hy033"]
-[ext_resource type="PackedScene" uid="uid://dan2j8hub6ux5" path="res://p_1.tscn" id="2_4y0t7"]
+[ext_resource type="Script" uid="uid://c5to2lr747lxo" path="res://tscn/map.gd" id="1_sgvko"]
+[ext_resource type="Texture2D" uid="uid://cuxoaep2a6jcs" path="res://bg/background 1.png" id="1_t3wxb"]
+[ext_resource type="PackedScene" uid="uid://dan2j8hub6ux5" path="res://tscn/p_1.tscn" id="2_sgvko"]
+[ext_resource type="PackedScene" uid="uid://dq6887w6675f1" path="res://tscn/p_2.tscn" id="4_vggvn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4y0t7"]
 size = Vector2(10, 664)
@@ -16,11 +18,12 @@ size = Vector2(1169, 20)
 size = Vector2(27, 684)
 
 [node name="Battlefield" type="Node2D" unique_id=1257658247]
+script = ExtResource("1_sgvko")
 
 [node name="Background1" type="Sprite2D" parent="." unique_id=1903552001]
-position = Vector2(582, 324.00003)
-scale = Vector2(2.0069447, 1.9691358)
-texture = ExtResource("1_hy033")
+position = Vector2(582, 326)
+scale = Vector2(2.0069447, 1.9814812)
+texture = ExtResource("1_t3wxb")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1319745226]
 
@@ -36,8 +39,8 @@ shape = SubResource("RectangleShape2D_fxwnf")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=882346468]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1816074304]
-position = Vector2(576.5, 656)
+[node name="floor" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1816074304]
+position = Vector2(586, 657)
 shape = SubResource("RectangleShape2D_vsh2u")
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=1502006390]
@@ -46,4 +49,8 @@ shape = SubResource("RectangleShape2D_vsh2u")
 position = Vector2(1175, 317)
 shape = SubResource("RectangleShape2D_tkjg1")
 
-[node name="p1" parent="." unique_id=577892896 instance=ExtResource("2_4y0t7")]
+[node name="p1" parent="." unique_id=577892896 instance=ExtResource("2_sgvko")]
+position = Vector2(233, 584)
+
+[node name="p2" parent="." unique_id=1220268888 instance=ExtResource("4_vggvn")]
+position = Vector2(1013, 583)

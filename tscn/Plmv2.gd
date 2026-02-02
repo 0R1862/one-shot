@@ -4,26 +4,25 @@ var speed = 300
 var h = 100
 @onready var gravity = Global.p_gravity
 var a_p = true
-@onready var target = get_tree().get_first_node_in_group("p2")
+@onready var target = get_tree().get_first_node_in_group("p1")
 var c_p = true
 
 func _ready():
 	if c_p == true:
 		$AnimatedSprite2D.animation = "idle"
 		$AnimatedSprite2D.play()
-		$AnimatedSprite2D.flip_h = false
+		$AnimatedSprite2D.flip_h = true
 	else:
 		$AnimatedSprite2D.animation = "idle"
 		$AnimatedSprite2D.play()
+		$AnimatedSprite2D.flip_h = true
 		c_p = false
-
 func get_input():
 	c_p = false
 	var direction = Input.get_vector("left", "right","turn", "roll")
 	velocity = direction * speed
 	
 	if Input.is_action_just_pressed("roll"):
-		a_p = false
 		$AnimatedSprite2D.animation = "roll"
 		$AnimatedSprite2D.play()
 	if Input.is_action_pressed("left"):
