@@ -179,3 +179,5 @@ shape = SubResource("CapsuleShape2D_wkhyr")
 
 [node name="bullet" type="Area2D" parent="." unique_id=313801942]
 script = ExtResource("6_i8ohx")
+
+[node name="b_s" type="Sprite2D" parent="bullet" unique_id=1676077315]
