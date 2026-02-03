@@ -15,7 +15,7 @@ func _ready():
 	else:
 		$AnimatedSprite2D.animation = "idle"
 		$AnimatedSprite2D.play()
-		$AnimatedSprite2D.flip_h = true
+		$AnimatedSprite2D.flip_h = false
 		c_p = false
 func get_input():
 	c_p = false
@@ -35,8 +35,7 @@ func get_input():
 		speed = 300
 		await get_tree().create_timer(2).timeout
 		a_p = true
-	if Input.is_action_just_pressed("turn"):
-		look_at(target.position)
+		rotate(180.0)
 	if velocity.length() < 0:
 		velocity = velocity.normalized() * speed
 		$AnimatedSprite2D.play()

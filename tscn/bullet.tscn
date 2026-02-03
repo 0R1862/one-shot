@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://c33lei0dgqwtt"]
+
+[ext_resource type="Script" uid="uid://dlybxn3jcy1v1" path="res://tscn/bullet.gd" id="1_i77r0"]
+[ext_resource type="Texture2D" uid="uid://db2vc7x1dmeld" path="res://art/bullet_1.png" id="1_lgrp4"]
+[ext_resource type="Script" uid="uid://bqmb07boofljh" path="res://tscn/bh.gd" id="3_ari5w"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i77r0"]
+radius = 1.0
+height = 10.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ari5w"]
+radius = 3.0
+height = 14.0
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1879071322]
+script = ExtResource("1_i77r0")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1214888556]
+texture = ExtResource("1_lgrp4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2124247152]
+shape = SubResource("CapsuleShape2D_i77r0")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=794740739]
+script = ExtResource("3_ari5w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1434199978]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_ari5w")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

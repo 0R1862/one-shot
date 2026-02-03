@@ -52,5 +52,5 @@ shape = SubResource("RectangleShape2D_tkjg1")
 [node name="p1" parent="." unique_id=577892896 instance=ExtResource("2_sgvko")]
 position = Vector2(233, 584)
 
-[node name="p2" parent="." unique_id=1220268888 instance=ExtResource("4_vggvn")]
-position = Vector2(1013, 583)
+[node name="p2" parent="." unique_id=432335266 instance=ExtResource("4_vggvn")]
+position = Vector2(1035, 586)

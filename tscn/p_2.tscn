@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://dq6887w6675f1"]
 
-[ext_resource type="Script" uid="uid://dem8e4vwvxndq" path="res://tscn/Plmv2.gd" id="1_s70xv"]
 [ext_resource type="Texture2D" uid="uid://dpud2my7hqqp5" path="res://art/Run.png" id="2_1sfx1"]
 [ext_resource type="Texture2D" uid="uid://4u8hcvsb28t7" path="res://art/Attack_2.png" id="2_ecwrm"]
 [ext_resource type="Texture2D" uid="uid://dbm1ltn2vy5cu" path="res://art/Aimed_shot.png" id="2_potx1"]
@@ -314,9 +313,17 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xmqrv"]
+radius = 14.0
+height = 62.0
+
 [node name="p2" type="CharacterBody2D" unique_id=432335266 groups=["Player", "p2"]]
-script = ExtResource("1_s70xv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1002623280]
+position = Vector2(16, -4)
 sprite_frames = SubResource("SpriteFrames_meaon")
 animation = &"dead"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=882028883]
+position = Vector2(1, 24)
+shape = SubResource("CapsuleShape2D_xmqrv")

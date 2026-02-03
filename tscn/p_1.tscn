@@ -5,7 +5,6 @@
 [ext_resource type="Texture2D" uid="uid://vnuv3gmp1uij" path="res://art/Dead.png" id="2_hvadw"]
 [ext_resource type="Texture2D" uid="uid://4u8hcvsb28t7" path="res://art/Attack_2.png" id="3_hvadw"]
 [ext_resource type="Texture2D" uid="uid://dgalb5wvw114y" path="res://art/Idle.png" id="4_g0fx5"]
-[ext_resource type="Script" uid="uid://dcjxsykvyk6se" path="res://bullet.gd" id="6_i8ohx"]
 [ext_resource type="Texture2D" uid="uid://ci6dr6kq60je7" path="res://art/Roll.png" id="6_i18yh"]
 [ext_resource type="Texture2D" uid="uid://dpud2my7hqqp5" path="res://art/Run.png" id="7_fvwoa"]
 
@@ -329,8 +328,3 @@ animation = &"idle"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=200585137]
 position = Vector2(1, 29)
 shape = SubResource("CapsuleShape2D_wkhyr")
-
-[node name="bullet" type="Area2D" parent="." unique_id=313801942]
-script = ExtResource("6_i8ohx")
-
-[node name="b_s" type="Sprite2D" parent="bullet" unique_id=1676077315]
